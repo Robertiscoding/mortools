@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  padding: 2rem;
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.3rem;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+::selection {
+  background: #0080FF;
+  text-shadow: none;
+}
+
+pre {
+  margin: 0;
+}
+
+.ascii-button {
+  background: rgba(255, 255, 255, 0.1); /* Translucent white background */
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+  border: 1px dashed white; /* Dashed white border */
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 5px;
+  outline: none;
+}
+
+.ascii-button:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+}
+
+.ascii-input {
+  background: rgba(255, 255, 255, 0.1); /* Translucent white background */
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  border: 1px dashed white; /* Dashed white border */
+  padding: 5px;
+  margin: 5px;
+}
